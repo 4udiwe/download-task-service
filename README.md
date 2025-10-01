@@ -53,4 +53,6 @@ go run cmd/main.go
   ![query3](pictures/get_by_id.png)
 
 Отображение загруженных файлов
+
+
   ![saved](pictures/saved.png)
