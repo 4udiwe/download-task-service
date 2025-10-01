@@ -17,11 +17,11 @@ func New(s TaskService) h.Handler {
 }
 
 type GetTaskByIDRequest struct {
-	ID string `path:"taskID" validate:"required"`
+	TaskID string `param:"taskID" validate:"required"`
 }
 
 func (h *handler) Handle(c echo.Context, in GetTaskByIDRequest) error {
-	task, err := h.service.GetTask(in.ID)
+	task, err := h.service.GetTask(in.TaskID)
 
 	if err != nil {
 		return echo.NewHTTPError(http.StatusInternalServerError, err.Error())
